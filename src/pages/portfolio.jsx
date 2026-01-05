@@ -129,7 +129,6 @@ const Portfolio = () => {
         <div className="">
           <RecentActivity activities={recentActivities} />
         </div>
-
       </div>
 
       <div className="dashboard-card px-4 pt-6 pb-4 relative ">
