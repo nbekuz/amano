@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "./assets/style/sidebar.css";
+@import "./assets/style/topnav.css";
+@import "./assets/style/dashboard.css";
+
+@theme {
+  --color-gray-700: #272530;
+  --color-white-100: #fdfcff;
+  --color-white-70: #ffffffb2;
+  --color-black-900: #070712;
+  --color-black-100: #1b1b23;
+  --color-primary: #8365FF;
+  --color-primary-hover: #7350e6;
+  --color-primary-rgb: 131 101 255;
+  --color-success: #07B78A;
+  --color-warning: #AB8213;
+  --color-bg-dark: #1A1A1A;
+  --color-red-light: #E91A1D1A;
+  --color-red-light-hover: #E91A1D2A;
+  --color-green-light: #18D04B1A;
+  --color-green-light-hover: #18D04B2A;
+  --color-bg-base: #0F0F0F;
+  --color-bg-hover: #252525;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #070712;
+  color: #ffffff;
+  font-family: 'Manrope', 'Nunito Sans', sans-serif;
+}

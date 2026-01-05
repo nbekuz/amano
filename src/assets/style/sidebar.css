@@ -1,0 +1,49 @@
+/* Sidebar Gradient Overlay */
+.sidebar-gradient-overlay {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.5;
+    background: linear-gradient(-120deg, #FFFFFF 0%, #7751DE 50%, #9C78FF 100%);
+    transform: rotate(-120deg);
+    width: 300px;
+    height: 20%;
+    bottom: 10%;
+    left: 0;
+    filter: blur(158px);
+    backdrop-filter: blur(158px);
+  }
+  
+/* Sidebar Button Styles */
+.sidebar-button {
+    width: 197px;
+    height: 38px;
+}
+
+/* Sidebar Active Button with Glass Effect */
+.sidebar-button-active {
+    background: rgba(192, 190, 199, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 197px;
+    height: 38px;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.sidebar-button-active::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 10px;
+    padding: 1px;
+    background: linear-gradient(to right, #898A8C 0%, #FFFFFF 50%, #898A8C 100%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+}
+  

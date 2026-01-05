@@ -1,0 +1,64 @@
+.topnav-blur {
+  filter: blur(70px);
+  -webkit-backdrop-filter: blur(20px);
+  background: #7e55ec;
+  opacity: 0.8;
+}
+/* TopNav Icon Buttons with Glass Effect */
+.topnav-icon-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 90px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all 0.2s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.topnav-icon-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 100%
+  );
+  border-radius: 90px 90px 0 0;
+  pointer-events: none;
+}
+
+.topnav-icon-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+}
+
+.topnav-icon-button svg {
+  position: relative;
+  z-index: 1;
+}
+
+/* TopNav Avatar with Orange Border */
+.topnav-avatar-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 90px;
+  padding: 2px;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
