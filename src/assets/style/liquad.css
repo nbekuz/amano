@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.15); */
 
   transition: transform 0.2s ease;
 }
@@ -31,7 +31,7 @@
 .lg-tint {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.08);
 }
 .btns .lg-tint {
   background: rgba(255, 255, 255, 0.04);
@@ -42,7 +42,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.5),
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.75),
     inset -1px -1px 1px rgba(0, 0, 0, 0.15);
 }
 
