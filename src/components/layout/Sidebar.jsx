@@ -28,7 +28,12 @@ const Sidebar = ({ currentPage, setCurrentPage }) => {
     <div className="w-64 h-full flex flex-col border-r border-gray-700  relative overflow-hidden">
       <div className="sidebar-gradient-overlay" />
       <div className="h-18 border-b flex items-center pl-5 border-gray-700 relative z-10">
-          <img src={logo} alt="AMANO INVEST" className="h-11.5 w-auto" />
+          <img 
+            src={logo} 
+            alt="AMANO INVEST" 
+            className="h-11.5 w-auto cursor-pointer" 
+            onClick={() => setCurrentPage('Dashboard')}
+          />
       </div>
 
       <nav className="flex-1 px-4 py-6 space-y-2 relative z-10">
