@@ -8,14 +8,13 @@ const WalletTabs = ({ tabs, selectedTab, onTabChange }) => {
             key={tab}
             onClick={() => onTabChange(tab)}
             className={`wallet-tab-btn px-4 py-2 font-medium transition-all rounded-lg ${
-              isSelected ? "wallet-tab-btn-active" : "wallet-tab-btn-inactive"
+              isSelected ? "btn-glass" : "wallet-tab-btn-inactive"
             }`}
           >
             {isSelected && (
               <>
-                <span className="wallet-tab-btn-effect"></span>
-                <span className="wallet-tab-btn-tint"></span>
-                <span className="wallet-tab-btn-shine"></span>
+                <span className="btn-glass-bg" />
+                <span className="btn-glass-border" />
               </>
             )}
             <span className="wallet-tab-btn-content">{tab}</span>
@@ -27,4 +26,3 @@ const WalletTabs = ({ tabs, selectedTab, onTabChange }) => {
 };
 
 export default WalletTabs;
-

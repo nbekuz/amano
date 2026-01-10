@@ -1,16 +1,20 @@
-import highIcon from '../assets/img/high.svg';
-import lowIcon from '../assets/img/low.svg';
-import LiquidGlassButton from './LiquidGlassButton';
+import highIcon from "../assets/img/high.svg";
+import lowIcon from "../assets/img/low.svg";
+import LiquidGlassButton from "./LiquidGlassButton";
+import BtnGlass from "./BtnGlass";
 
 const PortfolioTable = ({ holdings }) => {
   return (
     <div className="dashboard-card p-6 relative">
-    <div className='table-blur absolute transform -translate-x-1/2 left-1/2 top-6 h-8 w-1/2'></div>
+      <div className="table-blur absolute transform -translate-x-1/2 left-1/2 top-6 h-8 w-1/2"></div>
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-semibold text-white">Portfolio Snapshot</h2>
-        <LiquidGlassButton width={100} height={30} radius="8" className="btns">
+        {/* <LiquidGlassButton width={100} height={30} radius="8" className="btns">
           {holdings.length} Holding
-        </LiquidGlassButton>
+        </LiquidGlassButton> */}
+        <BtnGlass width={100} height={30} radius="8">
+          {holdings.length} Holding
+        </BtnGlass>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full portfolio-table">
@@ -32,12 +36,20 @@ const PortfolioTable = ({ holdings }) => {
                   <span className="portfolio-type-badge">{holding.type}</span>
                 </td>
                 <td className="py-4 text-white">{holding.value}</td>
-                <td className={`py-4 ${holding.rol.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>
+                <td
+                  className={`py-4 ${
+                    holding.rol.startsWith("+")
+                      ? "text-green-500"
+                      : "text-red-500"
+                  }`}
+                >
                   <div className="flex items-center gap-1.5">
-                    <img 
-                      src={holding.rol.startsWith('+') ? highIcon : lowIcon} 
-                      alt={holding.rol.startsWith('+') ? 'increase' : 'decrease'} 
-                      className="w-3 h-3" 
+                    <img
+                      src={holding.rol.startsWith("+") ? highIcon : lowIcon}
+                      alt={
+                        holding.rol.startsWith("+") ? "increase" : "decrease"
+                      }
+                      className="w-3 h-3"
                     />
                     <span>{holding.rol}</span>
                   </div>
@@ -45,19 +57,25 @@ const PortfolioTable = ({ holdings }) => {
                 <td className="py-4">
                   <div className="allocation-bar">
                     {Array.from({ length: 50 }).map((_, i) => {
-                      const activeSegments = Math.round((holding.allocation / 100) * 50);
+                      const activeSegments = Math.round(
+                        (holding.allocation / 100) * 50
+                      );
                       const isActive = i < activeSegments;
                       return (
                         <div
                           key={i}
-                          className={`allocation-segment ${isActive ? 'active' : ''}`}
+                          className={`allocation-segment ${
+                            isActive ? "active" : ""
+                          }`}
                         />
                       );
                     })}
                   </div>
                 </td>
                 <td className="py-4">
-                  <span className="portfolio-status-badge">{holding.status}</span>
+                  <span className="portfolio-status-badge">
+                    {holding.status}
+                  </span>
                 </td>
               </tr>
             ))}
@@ -69,4 +87,3 @@ const PortfolioTable = ({ holdings }) => {
 };
 
 export default PortfolioTable;
-

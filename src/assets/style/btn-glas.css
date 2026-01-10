@@ -1,0 +1,49 @@
+.btn-glass {
+  position: relative;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(192, 190, 199, 0.08);
+}
+
+/* GLASS BODY */
+.btn-glass-bg {
+  position: relative;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  color: white;
+}
+
+/* BORDER + LIGHT */
+.btn-glass-border {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.5) 10%,
+    rgba(255, 255, 255, 0.3) 80%,
+    transparent 100%
+  );
+
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+
+  padding: 1px;
+}
+
+/* TEXT */
+.btn-glass-content {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  font-weight: 400;
+}

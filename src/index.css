@@ -3,6 +3,7 @@
 @import "./assets/style/topnav.css";
 @import "./assets/style/dashboard.css";
 @import "./assets/style/liquad.css";
+@import "./assets/style/btn-glas.css";
 
 @theme {
   --color-gray-700: #272530;

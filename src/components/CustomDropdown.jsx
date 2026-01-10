@@ -57,11 +57,10 @@ const CustomDropdown = ({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="dropdown-lg-button w-full rounded-lg px-4 py-2 text-white/70 text-sm flex items-center justify-between transition-all"
+        className="btn-glass w-full rounded-lg px-4 py-2"
       >
-        <span className="dropdown-lg-effect"></span>
-        <span className="dropdown-lg-tint"></span>
-        <span className="dropdown-lg-shine"></span>
+        <span className="btn-glass-bg" />
+        <span className="btn-glass-border" />
         <span className="dropdown-lg-content flex items-center justify-between w-full">
           <span className="flex pr-2 text-sm">{displayValue}</span>
           <svg

@@ -9,6 +9,7 @@ import locIcon from "../assets/img/loc.svg";
 import nImage from "../assets/img/n.png";
 import LiquidGlassButton from "../components/LiquidGlassButton";
 import CustomDropdown from "../components/CustomDropdown";
+import BtnGlass from "../components/BtnGlass";
 
 const Marketplace = () => {
   const navigate = useNavigate();
@@ -151,19 +152,13 @@ const Marketplace = () => {
             value={sortBy}
             onChange={setSortBy}
           />
-          <LiquidGlassButton
-            ref={filterButtonRef}
-            onClick={() => setShowFilters(!showFilters)}
-            width="auto"
-            height={36}
-            radius="8"
-            className="btns"
-          >
-            <div className="flex items-center gap-2 px-4">
+
+          <BtnGlass width={92} height={36} radius="8">
+            <div className="flex items-center gap-2 px-4 ">
               <FilterIcon />
               Filter
             </div>
-          </LiquidGlassButton>
+          </BtnGlass>
         </div>
       </div>
 
@@ -176,17 +171,22 @@ const Marketplace = () => {
                 key={category}
                 onClick={() => setSelectedCategory(category.toLowerCase())}
                 className={`category-btn px-4 py-2 rounded-lg font-medium transition-all whitespace-nowrap ${
-                  isSelected ? "category-btn-active" : "category-btn-inactive"
+                  isSelected ? "btn-glass" : "category-btn-inactive"
                 }`}
               >
                 {isSelected && (
                   <>
-                    <span className="category-btn-effect"></span>
-                    <span className="category-btn-tint"></span>
-                    <span className="category-btn-shine"></span>
+                    <span className="btn-glass-bg" />
+                    <span className="btn-glass-border" />
                   </>
                 )}
-                <span className={`category-btn-content ${isSelected ? "text-white" : "text-white/70"}`}>{category}</span>
+                <span
+                  className={`category-btn-content ${
+                    isSelected ? "text-white" : "text-white/70"
+                  }`}
+                >
+                  {category}
+                </span>
               </button>
             );
           })}
