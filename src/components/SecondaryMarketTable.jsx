@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import highIcon from "../assets/img/high.svg";
 import locIcon from "../assets/img/loc.svg";
 import LiquidGlassButton from "./LiquidGlassButton";
+import BtnGlass from "./BtnGlass";
 const SecondaryMarketTable = ({ assets }) => {
   const navigate = useNavigate();
 
@@ -54,16 +55,9 @@ const SecondaryMarketTable = ({ assets }) => {
               <td className="py-4 text-white">{asset.volume}</td>
               <td className="py-4">
                 <div className="flex items-center gap-2">
-                  <LiquidGlassButton
-                    width="auto"
-                    height={36}
-                    radius="8"
-                    onClick={() => navigate(`/property/${asset.id}`)}
-                  >
-                    <div className="px-4 py-2 text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-700 hover:text-white transition-colors">
-                      Details
-                    </div>
-                  </LiquidGlassButton>
+                  <BtnGlass width={80} height={36} radius="8">
+                    Details
+                  </BtnGlass>
                   <button
                     onClick={() => navigate(`/trading/${asset.id}`)}
                     className="px-4 h-9 flex items-center bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-hover transition-colors"

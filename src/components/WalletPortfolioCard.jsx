@@ -4,7 +4,7 @@ import DepositIcon from "./icons/deposit";
 import WithdrawIcon from "./icons/withdraw";
 import xIcon from "../assets/img/x.svg";
 import LiquidGlassButton from "./LiquidGlassButton";
-
+import BtnGlass from "./BtnGlass";
 const WalletPortfolioCard = ({ totalValue, change }) => {
   const navigate = useNavigate();
 
@@ -28,29 +28,20 @@ const WalletPortfolioCard = ({ totalValue, change }) => {
           </div>
         </div>
         <div className="flex gap-3">
-          <LiquidGlassButton
-            onClick={() => navigate("/deposit")}
-            width="auto"
-            height={36}
-            radius="8"
-          >
-            <div className="px-4 py-2  text-sm font-medium flex items-center gap-2">
+          <BtnGlass width={105} height={36} radius="8">
+            <div className=" text-sm font-medium flex justify-center items-center gap-2">
               <DepositIcon />
               Deposit
             </div>
-          </LiquidGlassButton>
-        
-          <LiquidGlassButton
-            onClick={() => navigate("/deposit")}
-            width="auto"
-            height={36}
-            radius="8"
-          >
-            <div className="px-4 py-2  text-sm font-medium flex items-center gap-2">
+          </BtnGlass>
+          <BtnGlass width={115} height={36} radius="8">
+            <div className=" text-sm font-medium flex justify-center items-center gap-2">
               <WithdrawIcon />
               Withdraw
             </div>
-          </LiquidGlassButton>
+          </BtnGlass>
+
+          
         </div>
       </div>
     </div>
