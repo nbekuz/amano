@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import highIcon from '../assets/img/high.svg';
 import CustomDropdown from './CustomDropdown';
+import GlassTooltip from './GlassTooltip';
 
 const PerformanceAnalytics = ({ data }) => {
   const [selectedTab, setSelectedTab] = useState('totalValue');
@@ -67,16 +68,8 @@ const PerformanceAnalytics = ({ data }) => {
               axisLine={false}
               tickLine={false}
             />
-            <Tooltip
-              contentStyle={{ 
-                backgroundColor: '#1A1A1A', 
-                border: '1px solid #374151', 
-                borderRadius: '8px',
-                padding: '8px 12px'
-              }}
-              labelStyle={{ color: '#fff', fontSize: '12px', marginBottom: '4px' }}
-              formatter={(value) => [`$${value.toLocaleString()}`, selectedTab === 'totalValue' ? 'Total Value' : 'Yield Income']}
-            />
+           <Tooltip content={<GlassTooltip />} />
+
             {selectedTab === 'totalValue' ? (
               <Area 
                 type="monotone" 
