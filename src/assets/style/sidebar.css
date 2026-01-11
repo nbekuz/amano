@@ -33,7 +33,7 @@
 }
 
 .sidebar-lg-active {
-  background: rgba(192, 190, 199, 0.07);
+  /* background: rgba(192, 190, 199, 0.07); */
 }
 
 .sidebar-lg-effect {
@@ -95,8 +95,15 @@
 
   padding: 1px;
 }
+.btn-glass-bg{
+  background: rgba(255, 255, 255, 0.08);
+}
 .bg-line {
   background: #ffffff;
   width: 0.4px;
   filter: blur(0.9px);
+}
+.side-bg{
+  background: linear-gradient(99.89deg, rgba(255, 255, 255, 0) 2.49%, #7751DE 31.59%, #9C78FF 67.14%);
+
 }

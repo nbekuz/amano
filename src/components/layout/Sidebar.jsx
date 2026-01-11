@@ -64,6 +64,7 @@ const Sidebar = ({ currentPage, setCurrentPage }) => {
           <span className="text-sm font-medium">Settings</span>
         </SidebarLiquidGlassItem>
       </div>
+      <div className="absolute bottom-1/3 right-0   side-bg -rotate-45 blur-[80px] w-full h-10"></div>
     </div>
   );
 };

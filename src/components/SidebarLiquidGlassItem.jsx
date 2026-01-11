@@ -13,6 +13,7 @@ const SidebarLiquidGlassItem = ({ children, onClick, isActive = false }) => {
       {isActive && (
         <>
           <span class="glass-border"></span>
+          <span className="btn-glass-bg" />
           <img src={sa} alt="sa" className="w-full h-full absolute top-0 left-0" />
         </>
       )}
