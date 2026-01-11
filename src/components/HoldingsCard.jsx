@@ -24,7 +24,6 @@ const HoldingsCard = ({ title, currentValue, expectedYield, badge, id }) => {
         />
         {badge && (
           <div className="absolute top-3 left-3">
-            {/* <span className="holdings-badge">{badge}</span> */}
             <LiquidGlassButton width='auto' height={20} radius="12" className="btns">
             <span className="text-xs px-3">{badge}</span>
             

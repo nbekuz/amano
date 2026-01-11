@@ -1,4 +1,3 @@
-/* Dashboard Card with Glass Effect */
 .dashboard-card {
   border-radius: 17px;
   position: relative;
@@ -23,8 +22,6 @@
   pointer-events: none;
   z-index: -1;
 }
-
-/* Stats Card Icon with Glass Effect */
 .stats-card-icon {
   width: 47px;
   height: 47px;
@@ -60,7 +57,6 @@
   z-index: 1;
 }
 
-/* Compliance Badge */
 .compliance-badge {
   padding: 2px 8px;
   border-radius: 58px;
@@ -81,8 +77,6 @@
   background-color: rgba(251, 29, 33, 0.12);
   color: #fb1d21;
 }
-
-/* Compliance Card */
 .compliance-card {
   background: linear-gradient(180deg, #010214 34.31%, #7e55ec 100%);
 }
@@ -107,7 +101,6 @@
   transform: rotate(-45deg);
 }
 
-/* Portfolio Holding Button */
 .portfolio-holding-button {
   background-color: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(20px);
@@ -153,7 +146,6 @@
   background-color: rgba(255, 255, 255, 0.03);
 }
 
-/* Portfolio Table Styles */
 .portfolio-table {
   border-collapse: separate;
   border-spacing: 0 8px;
@@ -234,7 +226,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* ROL Column Styling */
 .portfolio-table-row td:nth-child(4) {
   font-family: "Nunito Sans", sans-serif;
   font-size: 17px;
@@ -251,7 +242,6 @@
   color: #e75957;
 }
 
-/* Allocation Bar Styles */
 .allocation-bar {
   display: flex;
   align-items: center;
@@ -275,7 +265,6 @@
   background-color: #856dfc;
 }
 
-/* Portfolio Type Badge */
 .portfolio-type-badge {
   padding: 4px 8px;
   border-radius: 20px;
@@ -288,7 +277,6 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
-/* Portfolio Status Badge */
 .portfolio-status-badge {
   padding: 4px 8px;
   border-radius: 20px;
@@ -301,7 +289,6 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
-/* Portfolio Allocation Item */
 .portfolio-allocation-item {
   display: flex;
   justify-content: space-between;
@@ -319,7 +306,6 @@
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Income Summary Card */
 .income-summary-card {
   background: linear-gradient(
     180deg,
@@ -350,7 +336,6 @@
   border-color: rgb(var(--color-primary-rgb));
 }
 
-/* Pie Chart Segment Inner Shadow */
 .pie-segment {
   filter: drop-shadow(inset 0 0 6px rgba(0, 0, 0, 0.5));
 }
@@ -363,8 +348,6 @@
   filter: blur(90px);
   background: #7e55ec;
 }
-
-/* Recent Activity Styles */
 .recent-activity-item {
   display: flex;
   align-items: flex-start;
@@ -431,7 +414,6 @@
   height: 19px;
 }
 
-/* Your Holdings Card Styles */
 .holdings-card {
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -448,7 +430,6 @@
   transform: scale(1.05);
 }
 
-/* Performance Analytics Tabs */
 .performance-tab-active {
   padding: 6px 14px;
   border-radius: 6px;
@@ -478,7 +459,6 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Token Information Cards */
 .token-info-card {
   display: flex;
   justify-content: space-between;
@@ -497,7 +477,6 @@
   }
 }
 
-/* Ownership Breakdown Bars */
 .ownership-bar {
   width: 4px;
   border-radius: 2;
@@ -512,7 +491,6 @@
   background-color: rgba(93, 178, 255, 0.2);
 }
 
-/* Legal Documents Button */
 .legal-document-button {
   padding: 4px 12px;
   background-color: rgba(131, 101, 255, 0.1);
@@ -530,7 +508,6 @@
   border-color: rgba(131, 101, 255, 0.5);
 }
 
-/* Payout History Styles */
 .payout-view-all-button {
   padding: 6px 12px;
   background-color: rgba(255, 255, 255, 0.05);
@@ -565,7 +542,6 @@
   border-bottom: none;
 }
 
-/* Advanced Filters Checkbox Styles */
 .advanced-filter-checkbox {
   appearance: none;
   width: 16px;
@@ -602,7 +578,6 @@
   ring-color: rgb(var(--color-primary-rgb));
 }
 
-/* Features Section Wrapper */
 .features-section-wrapper {
   background: var(--color-bg-dark);
   border-radius: 17px;
@@ -628,7 +603,6 @@
   z-index: -1;
 }
 
-/* Features Item Borders */
 .features-item-border-bottom {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -637,7 +611,6 @@
   border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Overview Section Wrapper */
 .overview-section-wrapper {
   background: var(--color-bg-dark);
   border-radius: 17px;
@@ -663,7 +636,6 @@
   z-index: -1;
 }
 
-/* Overview Item Borders */
 .overview-item-border-bottom {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -683,7 +655,6 @@
   font-weight: 500;
 }
 
-/* Custom Dropdown Liquid Glass Styles */
 .dropdown-lg-button {
   position: relative;
   overflow: hidden;
@@ -703,7 +674,6 @@
   inset: 0;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  /* filter: url(#glass-distortion); */
   border-radius: 8px;
   z-index: 0;
 }
@@ -743,7 +713,6 @@
   -webkit-backdrop-filter: blur(8px);
 
   backdrop-filter: blur(8px);
-  /* filter: url(#glass-distortion); */
   border-radius: 8px;
   z-index: 0;
 }
@@ -787,7 +756,6 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Price Chart Button Liquid Glass */
 .price-chart-btn {
   position: relative;
   overflow: hidden;
@@ -849,7 +817,6 @@
   z-index: 1;
 }
 
-/* Buy Sell Panel Button Liquid Glass */
 .buy-sell-btn {
   position: relative;
   overflow: hidden;
@@ -907,7 +874,6 @@
   z-index: 1;
 }
 
-/* Order Type Button Liquid Glass */
 .order-type-btn {
   position: relative;
   overflow: hidden;
@@ -965,7 +931,6 @@
   z-index: 1;
 }
 
-/* Category Button Liquid Glass */
 .category-btn {
   position: relative;
   overflow: hidden;
@@ -1023,7 +988,6 @@
   z-index: 1;
 }
 
-/* Search Bar Liquid Glass */
 .search-bar-glass {
   position: relative;
   overflow: hidden;
@@ -1066,7 +1030,6 @@
   align-items: center;
 }
 
-/* Wallet Tab Button Liquid Glass */
 .wallet-tab-btn {
   position: relative;
   overflow: hidden;

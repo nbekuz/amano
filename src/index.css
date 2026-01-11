@@ -33,10 +33,6 @@ body {
   font-family: "Manrope", "Nunito Sans", sans-serif;
 }
 
-
-
-/* ===== GLASS TOOLTIP (MATCH DROPDOWN STYLE) ===== */
-
 .tooltip-lg {
   position: relative;
   pointer-events: none;
@@ -46,12 +42,9 @@ body {
   border-radius: 8px;
 
   background: transparent;
-  box-shadow:
-    0 3px 6px rgba(0, 0, 0, 0.25),
-    0 0 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
-/* blur layer */
 .tooltip-lg-effect {
   position: absolute;
   inset: 0;
@@ -61,7 +54,6 @@ body {
   z-index: 0;
 }
 
-/* tint layer (same as dropdown) */
 .tooltip-lg-tint {
   position: absolute;
   inset: 0;
@@ -70,19 +62,16 @@ body {
   z-index: 0;
 }
 
-/* shine layer */
 .tooltip-lg-shine {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  box-shadow:
-    inset 1px 1px 1px rgba(255, 255, 255, 0.5),
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.5),
     inset -1px -1px 1px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   z-index: 0;
 }
 
-/* content */
 .tooltip-lg-content {
   position: relative;
   z-index: 1;

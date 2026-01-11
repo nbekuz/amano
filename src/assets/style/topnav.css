@@ -4,7 +4,7 @@
   background: #7e55ec;
   opacity: 0.8;
 }
-/* TopNav Icon Buttons with Glass Effect */
+
 .topnav-icon-button {
   width: 32px;
   height: 32px;
@@ -50,8 +50,6 @@
   position: relative;
   z-index: 1;
 }
-
-/* TopNav Avatar with Orange Border */
 .topnav-avatar-wrapper {
   width: 32px;
   height: 32px;

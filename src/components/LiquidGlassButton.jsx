@@ -4,14 +4,13 @@ const LiquidGlassButton = ({
   className = "",
   width = 32,
   height = 32,
-  radius = 8, // number | "full"
+  radius = 8, 
 }) => {
   const borderRadius = radius === "full" ? "50%" : `${radius}px`;
   const buttonWidth = width === "auto" || width === undefined ? "max-content" : width;
 
   return (
     <div className={` ${className}`}>
-      {/* SVG FILTER — 1 marta */}
       <svg width="0" height="0" style={{ position: "absolute" }} aria-hidden>
         <defs>
           <filter id="glass-distortion">

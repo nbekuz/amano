@@ -1,15 +1,13 @@
 import axios from 'axios'
 
-// Create axios instance
 const axiosInstance = axios.create({
-  baseURL: 'https://jsonplaceholder.typicode.com', // Example API
+  baseURL: 'https://jsonplaceholder.typicode.com', 
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
   },
 })
 
-// Request interceptor
 axiosInstance.interceptors.request.use(
   (config) => {
     // You can add auth token here
