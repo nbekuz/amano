@@ -1,9 +1,18 @@
-import { useState } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import CustomDropdown from './CustomDropdown';
-
+import { useState } from "react";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
+import CustomDropdown from "./CustomDropdown";
+import GlassTooltip from "./GlassTooltip";
 const WalletPerformanceGraph = ({ data }) => {
-  const [timeframe, setTimeframe] = useState('Last 6 month');
+  const [timeframe, setTimeframe] = useState("Last 6 month");
 
   return (
     <div className="dashboard-card p-6">
@@ -25,7 +34,7 @@ const WalletPerformanceGraph = ({ data }) => {
             </div>
           </div>
           <CustomDropdown
-            options={['Last 6 month', 'Last year', 'All time']}
+            options={["Last 6 month", "Last year", "All time"]}
             value={timeframe}
             onChange={setTimeframe}
             className="w-40"
@@ -34,45 +43,38 @@ const WalletPerformanceGraph = ({ data }) => {
       </div>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.1)" />
-          <XAxis 
-            dataKey="date" 
-            stroke="#9CA3AF"
-            style={{ fontSize: '12px' }}
+          <CartesianGrid
+            strokeDasharray="3 3"
+            stroke="rgba(255, 255, 255, 0.1)"
           />
-          <YAxis 
+          <XAxis dataKey="date" stroke="#9CA3AF" style={{ fontSize: "12px" }} />
+          <YAxis
             stroke="#9CA3AF"
-            style={{ fontSize: '12px' }}
+            style={{ fontSize: "12px" }}
             tickFormatter={(value) => `$${value}k`}
           />
-          <Tooltip 
-            contentStyle={{ 
-              backgroundColor: 'rgba(0, 0, 0, 0.8)', 
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '8px'
-            }}
-          />
+          <Tooltip content={<GlassTooltip active={true} />} />
           <Legend />
-          <Line 
-            type="monotone" 
-            dataKey="fiat" 
-            stroke="#8365FF" 
+          <Line
+            type="monotone"
+            dataKey="fiat"
+            stroke="#8365FF"
             strokeWidth={2}
             dot={false}
             name="Fiat"
           />
-          <Line 
-            type="monotone" 
-            dataKey="crypto" 
-            stroke="#5DB2FF" 
+          <Line
+            type="monotone"
+            dataKey="crypto"
+            stroke="#5DB2FF"
             strokeWidth={2}
             dot={false}
             name="Crypto"
           />
-          <Line 
-            type="monotone" 
-            dataKey="rwa" 
-            stroke="#47AA52" 
+          <Line
+            type="monotone"
+            dataKey="rwa"
+            stroke="#47AA52"
             strokeWidth={2}
             dot={false}
             name="RWA tokens"
@@ -84,4 +86,3 @@ const WalletPerformanceGraph = ({ data }) => {
 };
 
 export default WalletPerformanceGraph;
-

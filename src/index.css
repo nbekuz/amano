@@ -11,17 +11,17 @@
   --color-white-70: #ffffffb2;
   --color-black-900: #070712;
   --color-black-100: #1b1b23;
-  --color-primary: #8365FF;
+  --color-primary: #8365ff;
   --color-primary-hover: #7350e6;
   --color-primary-rgb: 131 101 255;
-  --color-success: #07B78A;
-  --color-warning: #AB8213;
-  --color-bg-dark: #1A1A1A;
-  --color-red-light: #E91A1D1A;
-  --color-red-light-hover: #E91A1D2A;
-  --color-green-light: #18D04B1A;
-  --color-green-light-hover: #18D04B2A;
-  --color-bg-base: #0F0F0F;
+  --color-success: #07b78a;
+  --color-warning: #ab8213;
+  --color-bg-dark: #1a1a1a;
+  --color-red-light: #e91a1d1a;
+  --color-red-light-hover: #e91a1d2a;
+  --color-green-light: #18d04b1a;
+  --color-green-light-hover: #18d04b2a;
+  --color-bg-base: #0f0f0f;
   --color-bg-hover: #252525;
 }
 
@@ -30,41 +30,72 @@ body {
   padding: 0;
   background-color: #070712;
   color: #ffffff;
-  font-family: 'Manrope', 'Nunito Sans', sans-serif;
+  font-family: "Manrope", "Nunito Sans", sans-serif;
 }
-.figma-glass-tooltip {
-  width: 118px;
-  min-height: 56px;
-  padding: 8px 10px;
 
+
+
+/* ===== GLASS TOOLTIP (MATCH DROPDOWN STYLE) ===== */
+
+.tooltip-lg {
+  position: relative;
+  pointer-events: none;
+
+  min-width: 120px;
+  padding: 8px 10px;
   border-radius: 8px;
 
-  /* FILL */
-  background: rgba(255, 255, 255, 0.10) !important;
-
-  /* GLASS */
-  backdrop-filter: blur(10px) saturate(140%);
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
-
-  /* BORDER (FIGMA LINEAR GRADIENT) */
-  border: 1px solid transparent;
-  background-image:
-    linear-gradient(
-      rgba(255,255,255,0.10),
-      rgba(255,255,255,0.10)
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.10),
-      rgba(255,255,255,0.03)
-    );
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-
-  /* SHADOW */
+  background: transparent;
   box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.35),
-    inset 1px 1px 1px rgba(255,255,255,0.25);
+    0 3px 6px rgba(0, 0, 0, 0.25),
+    0 0 10px rgba(0, 0, 0, 0.15);
+}
 
+/* blur layer */
+.tooltip-lg-effect {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+/* tint layer (same as dropdown) */
+.tooltip-lg-tint {
+  position: absolute;
+  inset: 0;
+  background: rgba(192, 190, 199, 0.08);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+/* shine layer */
+.tooltip-lg-shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow:
+    inset 1px 1px 1px rgba(255, 255, 255, 0.5),
+    inset -1px -1px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+/* content */
+.tooltip-lg-content {
+  position: relative;
+  z-index: 1;
+}
+
+.tooltip-lg-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2px;
+}
+
+.tooltip-lg-value {
+  font-size: 14px;
+  font-weight: 600;
   color: #ffffff;
 }

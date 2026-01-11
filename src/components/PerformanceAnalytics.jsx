@@ -42,7 +42,7 @@ const PerformanceAnalytics = ({ data }) => {
                 : "performance-tab-inactive"
             }
           >
-            Yield Income
+            Yield Income 
           </button>
         </div>
         <CustomDropdown
@@ -103,9 +103,8 @@ const PerformanceAnalytics = ({ data }) => {
               axisLine={false}
               tickLine={false}
             />
-            <Tooltip
-              content={<GlassTooltip />}
-              cursor={{ stroke: "rgba(255,255,255,0.1)", strokeWidth: 1 }}
+             <Tooltip
+              content={<GlassTooltip active={true} />}
             />
 
             {selectedTab === "totalValue" ? (

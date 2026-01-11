@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-
+import GlassTooltip from './GlassTooltip';
 const PriceChart = ({ data }) => {
   const [selectedView, setSelectedView] = useState('original');
 
@@ -67,15 +67,8 @@ const PriceChart = ({ data }) => {
               axisLine={false}
               tickLine={false}
             />
-            <Tooltip
-              contentStyle={{ 
-                backgroundColor: '#1A1A1A', 
-                border: '1px solid #374151', 
-                borderRadius: '8px',
-                padding: '8px 12px'
-              }}
-              labelStyle={{ color: '#fff', fontSize: '12px', marginBottom: '4px' }}
-              formatter={(value) => [`$${value.toLocaleString()}`, 'Price']}
+          <Tooltip
+              content={<GlassTooltip active={true} />}
             />
             <Area 
               type="monotone" 

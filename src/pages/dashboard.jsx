@@ -15,6 +15,7 @@ import BankIcon from '../components/icons/bank';
 import DownIcon from '../components/icons/down';
 import checkIcon from '../assets/img/check.svg';
 import pendingIcon from '../assets/img/pending.svg';
+import GlassTooltip from '../components/GlassTooltip';
 
 const Dashboard = () => {
   const [incomeType, setIncomeType] = useState('Dividend');
@@ -136,15 +137,8 @@ const Dashboard = () => {
                     tickLine={false}
                   />
                   <Tooltip
-                    contentStyle={{ 
-                      backgroundColor: '#1A1A1A', 
-                      border: '1px solid #374151', 
-                      borderRadius: '8px',
-                      padding: '8px 12px'
-                    }}
-                    labelStyle={{ color: '#fff', fontSize: '12px', marginBottom: '4px' }}
-                    formatter={(value) => [`$${value.toLocaleString()}`, 'Income']}
-                  />
+              content={<GlassTooltip active={true} />}
+            />
                   <Area 
                     type="monotone" 
                     dataKey="income" 
