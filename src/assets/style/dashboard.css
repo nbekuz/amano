@@ -741,6 +741,7 @@
   inset: 0;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  
 
   /* filter: url(#glass-distortion); */
   border-radius: 8px;
