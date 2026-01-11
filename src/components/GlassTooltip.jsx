@@ -1,17 +1,15 @@
-const GlassTooltip = ({ active, payload, label }) => {
-    if (!active || !payload || !payload.length) return null;
-  
-    const value = payload[0].value;
+ const GlassTooltip = ({ active, payload }) => {
+    if (!active || !payload?.length) return null;
   
     return (
-      <div className="glass-tooltip">
-        <div className="glass-tooltip-label">
-          {selectedTab === 'totalValue' ? 'Total Value' : 'Yield Income'}
+      <div className="figma-glass-tooltip">
+        <div className="figma-glass-tooltip-label">
+          Mar 02, 2025
         </div>
-        <div className="glass-tooltip-value">
-          ${value.toLocaleString()}
+        <div className="figma-glass-tooltip-value">
+          ${payload[0].value.toLocaleString()}
         </div>
       </div>
     );
   };
-  
+  export default GlassTooltip;
