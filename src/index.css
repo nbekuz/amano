@@ -55,8 +55,8 @@ body {
 .tooltip-lg-effect {
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   border-radius: 8px;
   z-index: 0;
 }
