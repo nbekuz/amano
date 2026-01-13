@@ -1,7 +1,24 @@
+import { useState } from 'react';
 import Sidebar from './Sidebar';
 import TopNav from './TopNav';
+import WalletPopup from '../WalletPopup';
 
 const Layout = ({ children, currentPage, setCurrentPage, hideSidebar = false }) => {
+  const [showWalletPopup, setShowWalletPopup] = useState(false);
+
+  const handlePageChange = (pageId) => {
+    if (pageId === 'Wallet') {
+      setShowWalletPopup(true);
+      return; // Don't navigate, just show popup
+    } else {
+      setCurrentPage(pageId);
+    }
+  };
+
+  const handleWalletClick = () => {
+    setShowWalletPopup(true);
+  };
+
   return (
     <>
       <svg style={{ display: 'none' }} className="liquid-glass-filter">
@@ -25,15 +42,20 @@ const Layout = ({ children, currentPage, setCurrentPage, hideSidebar = false }) 
       </svg>
       <div className="flex h-screen bg-bg-base overflow-hidden">
         {!hideSidebar && (
-          <Sidebar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+          <Sidebar currentPage={currentPage} setCurrentPage={handlePageChange} />
         )}
         <div className="flex-1 flex flex-col overflow-hidden">
-          <TopNav />
+          <TopNav onWalletClick={handleWalletClick} />
           <main className="flex-1 p-6 overflow-x-auto">
             {children}
           </main>
         </div>
       </div>
+      
+      <WalletPopup 
+        isOpen={showWalletPopup} 
+        onClose={() => setShowWalletPopup(false)} 
+      />
     </>
   );
 };

@@ -9,39 +9,38 @@ const WalletPortfolioCard = ({ totalValue, change }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="dashboard-card p-6 relative">
-      <img
-        src={xIcon}
-        alt="x"
-        className="w-auto h-full left-1/2 top-0 transform -translate-x-1/2 absolute"
-      />
+    <div className="dashboard-card px-5 py-4 h-full relative flex flex-col justify-between ">
       <div className="stat-card-blur absolute top-6 rounded-lg -right-3 h-12.5 w-41"></div>
-      <div className="flex justify-between items-start">
+
+      <div className="flex justify-between ">
         <div>
-          <div className="text-gray-400 text-sm mb-1">
+          <div className="text-white/70 font-medium text-sm mb-3">
             Total Portfolio Value
           </div>
-          <div className="text-white font-bold text-3xl mb-2">{totalValue}</div>
-          <div className="flex items-center gap-1 text-success text-sm">
-            <img src={highIcon} alt="trend" className="w-4 h-4" />
-            <span>{change}</span>
-          </div>
+          <div className="text-white font-bold text-2xl  ">{totalValue}</div>
         </div>
-        <div className="flex gap-3">
-          <BtnGlass width={105} height={36} radius="8">
-            <div className=" text-sm font-medium flex justify-center items-center gap-2">
-              <DepositIcon />
+        <div className="text-white -rotate-135 text-lg w-5 h-5 rounded-full ">
+          <DepositIcon />
+        </div>
+      </div>
+      <div className="flex justify-between items-start">
+        <div className="flex justify-between gap-3">
+          <BtnGlass width={100} height={32} radius={16}>
+            <div className=" text-sm font-medium flex   items-center gap-1">
+              <div className="text-primary w-6.5 h-6.5 ml-0.5 rotate-45 rounded-full flex justify-center items-center bg-primary/20">
+                <DepositIcon />
+              </div>
               Deposit
             </div>
           </BtnGlass>
-          <BtnGlass width={115} height={36} radius="8">
-            <div className=" text-sm font-medium flex justify-center items-center gap-2">
-              <WithdrawIcon />
+          <BtnGlass width={115} height={32} radius={16}>
+            <div className=" text-sm font-medium flex  items-center gap-1">
+              <div className="text-primary w-6.5 h-6.5 ml-0.5 -rotate-135 rounded-full flex justify-center items-center bg-primary/20">
+                <DepositIcon />
+              </div>
               Withdraw
             </div>
           </BtnGlass>
-
-          
         </div>
       </div>
     </div>

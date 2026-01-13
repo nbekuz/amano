@@ -720,7 +720,7 @@
 .dropdown-lg-menu-tint {
   position: absolute;
   inset: 0;
-  background: rgba(192, 190, 199, 0.08);
+  background: #00000066;
   border-radius: 8px;
   z-index: 0;
 }
@@ -738,6 +738,66 @@
 .dropdown-lg-menu-content {
   position: relative;
   z-index: 1;
+}
+
+/* Wallet Popup Styles */
+.wallet-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(39, 37, 48, 0.5);
+  z-index: 99999;
+  pointer-events: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wallet-popup {
+  position: relative;
+  width: 260px;
+  max-width: 260px;
+  margin-top: 70px;
+  margin-right: 205px;
+  height: 165px;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.wallet-popup-effect {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 14px;
+  z-index: 0;
+}
+
+.wallet-popup-tint {
+  position: absolute;
+  inset: 0;
+  background: #C0BEC70D;
+  border-radius: 14px;
+  z-index: 0;
+}
+
+.wallet-popup-shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.3),
+    inset -1px -1px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 14px;
+  z-index: 0;
+}
+
+.wallet-popup-content {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 0;
 }
 
 .dropdown-lg-menu-item {

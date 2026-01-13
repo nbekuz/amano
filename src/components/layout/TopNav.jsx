@@ -2,7 +2,7 @@ import WalletIcon from "../icons/wallet";
 import RingIcon from "../icons/ring";
 import LiquidGlassButton from "../LiquidGlassButton";
 
-const TopNav = () => {
+const TopNav = ({ onWalletClick }) => {
   return (
     <div className="h-18 border-b border-gray-700 flex items-center justify-between px-6 relative ">
       <div className="topnav-blur absolute -top-5 h-12.5 left-1/2 transform -translate-x-1/2 w-1/2 border"></div>
@@ -40,7 +40,7 @@ const TopNav = () => {
       </div>
 
       <div className="flex items-center gap-4">
-        <LiquidGlassButton radius="full">
+        <LiquidGlassButton radius="full" onClick={onWalletClick}>
           <WalletIcon />
         </LiquidGlassButton>
         <LiquidGlassButton radius="full">
