@@ -10,7 +10,7 @@ const WalletPortfolioCard = ({ totalValue, change }) => {
 
   return (
     <div className="dashboard-card px-5 py-4 h-full relative flex flex-col justify-between ">
-      <div className="stat-card-blur absolute top-6 rounded-lg -right-3 h-12.5 w-41"></div>
+      {/* <div className="stat-card-blur absolute top-6 rounded-lg -right-3 h-12.5 w-41"></div> */}
 
       <div className="flex justify-between ">
         <div>
