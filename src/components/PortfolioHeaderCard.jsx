@@ -15,13 +15,13 @@ const PortfolioHeaderCard = ({ id, image, badges, title, location, description }
           <img 
             src={image} 
             alt={title} 
-            className="w-full h-full object-cover rounded-l-xl"
+            className="w-full h-full object-cover rounded-xl"
           />
         </div>
         <div className="flex-1 p-6">
           <div className="flex flex-wrap gap-2 mb-3">
             {badges.map((badge, index) => (
-              <Badge key={index} label={badge} />
+              <Badge key={index} label={badge} variant="default" />
             ))}
           </div>
           <h2 className="text-2xl font-bold text-white mb-2">{title}</h2>

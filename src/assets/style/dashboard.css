@@ -84,7 +84,10 @@
   filter: blur(70px);
   background: #482f89;
   transform: rotate(-45deg);
+  will-change: filter, transform;
 }
+
+
 .h-card-blur {
   filter: blur(80px);
   background: #482f89;
@@ -778,7 +781,7 @@
 .wallet-popup-tint {
   position: absolute;
   inset: 0;
-  background: #C0BEC70D;
+  background: #c0bec70d;
   border-radius: 14px;
   z-index: 0;
 }

@@ -1,6 +1,7 @@
 import WalletIcon from "../icons/wallet";
 import RingIcon from "../icons/ring";
 import LiquidGlassButton from "../LiquidGlassButton";
+import avatarImg from "../../assets/img/avatar.png";
 
 const TopNav = ({ onWalletClick }) => {
   return (
@@ -48,31 +49,15 @@ const TopNav = ({ onWalletClick }) => {
         </LiquidGlassButton>
 
         <div className="flex items-center gap-3 pl-4 pr-10 border-gray-700">
-          <div className="relative ">
-            <div className="topnav-avatar-wrapper ">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center overflow-hidden ">
-                <svg
-                  viewBox="0 0 16 16"
-                  width="16"
-                  height="16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 8C9.65685 8 11 6.65685 11 5C11 3.34315 9.65685 2 8 2C6.34315 2 5 3.34315 5 5C5 6.65685 6.34315 8 8 8Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M3 14C3 11.7909 4.79086 10 7 10H9C11.2091 10 13 11.7909 13 14V15H3V14Z"
-                    fill="white"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+          <img
+            src={avatarImg}
+            alt="avatar"
+            className="w-8 h-8 object-cover rounded-full"
+          />
+
           <div className="flex flex-col">
-            <span className="text-white text-sm font-medium">Masum B</span>
-            <span className="text-gray-400 text-xs">masum24y</span>
+            <span className="text-white text-sm font-medium">Alex Y</span>
+            <span className="text-gray-400 text-xs">alex07Y</span>
           </div>
           <button className="text-gray-400 hover:text-white transition-colors">
             <svg

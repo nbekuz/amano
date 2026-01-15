@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import nImage from '../assets/img/n.png';
+import nImage from '../assets/img/trad.png';
 import PortfolioHeaderCard from '../components/PortfolioHeaderCard';
 import KeyMetrics from '../components/KeyMetrics';
 import PerformanceAnalytics from '../components/PerformanceAnalytics';
@@ -87,9 +87,9 @@ const HoldingsDetail = () => {
         id={id}
         image={nImage}
         badges={["Active", "Medium Risk", "Tech"]}
-        title="Tech Startup Portfolio"
+        title="Real Estate Fund"
         location="San Francisco, CA"
-        description="Diversified portfolio of early-stage tech companies in Silicon Valley, focusing on AI, blockchain, and sustainable technologies."
+        description="Diversified portfolio of income-generating real estate assets in San Francisco, focusing on stable yields and capital growth."
       />
 
       <KeyMetrics metrics={metrics} />

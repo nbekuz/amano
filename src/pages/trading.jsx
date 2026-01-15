@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import nImage from "../assets/img/n.png";
+import nImage from "../assets/img/trad.png";
 import highIcon from "../assets/img/high.svg";
 import Badge from "../components/Badge";
 import locIcon from "../assets/img/loc.svg";
@@ -89,8 +89,24 @@ const Trading = () => {
     },
   ];
 
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate("/portfolio");
+    }
+  };
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
+      <div>
+        <button
+          onClick={handleBack}
+          className="text-gray-400 hover:text-white mb-0 text-sm"
+        >
+          ← Back to portfolio
+        </button>
+      </div>
       <div className="flex flex-col lg:flex-row gap-4">
         <div className="dashboard-card p-5 overflow-hidden flex-1 flex justify-between items-center relative">
           <img
@@ -103,15 +119,15 @@ const Trading = () => {
               <img
                 src={nImage}
                 alt="Tech Startup Portfolio"
-                className="w-full h-full object-cover rounded-l-xl"
+                className="w-15.5 h-15.5 object-cover rounded-xl"
               />
             </div>
             <div className="flex-1 p-4">
               <div className="flex items-center gap-2 mb-2 flex-wrap">
                 <h2 className="text-xl font-bold text-white">
-                  Tech Startup Portfolio (TECH)
+                  Real Estate Fund
                 </h2>
-                <Badge label="tech" />
+                <Badge label="tech" variant="filled" />
               </div>
               <div className="flex items-center gap-2">
                 <img
@@ -351,7 +367,7 @@ const Trading = () => {
                         <span className="px-3 text-xs text-white">Edit</span>
                       </LiquidGlassButton>
                       <LiquidGlassButton width="auto" height={28} radius="8">
-                      <span className="px-3 text-xs text-white">Cancel</span>
+                        <span className="px-3 text-xs text-white">Cancel</span>
                       </LiquidGlassButton>
                     </div>
                   </td>
