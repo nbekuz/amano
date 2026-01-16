@@ -7,12 +7,7 @@ const Layout = ({ children, currentPage, setCurrentPage, hideSidebar = false }) 
   const [showWalletPopup, setShowWalletPopup] = useState(false);
 
   const handlePageChange = (pageId) => {
-    if (pageId === 'Wallet') {
-      setShowWalletPopup(true);
-      return; // Don't navigate, just show popup
-    } else {
-      setCurrentPage(pageId);
-    }
+    setCurrentPage(pageId);
   };
 
   const handleWalletClick = () => {

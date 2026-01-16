@@ -1,28 +1,43 @@
-import Badge from './Badge';
-import ShareIcon from './icons/share';
-import HeartIcon from './icons/heart';
-import locIcon from '../assets/img/loc.svg';
-
-const PropertyImageHeader = ({ image, badges, title, location, isSaved, onSaveToggle }) => {
+import Badge from "./Badge";
+import ShareIcon from "./icons/share";
+import HeartIcon from "./icons/heart";
+import locIcon from "../assets/img/loc.svg";
+import LiquidGlassButton from "./LiquidGlassButton";
+const PropertyImageHeader = ({
+  image,
+  badges,
+  title,
+  location,
+  isSaved,
+  onSaveToggle,
+}) => {
   return (
-    <div className="relative h-[500px] rounded-xl overflow-hidden">
+    <div className="relative h-[500px]  rounded-xl overflow-hidden">
       <img src={image} alt="Property" className="w-full h-full object-cover" />
-      <div className="absolute top-4 right-4 flex gap-2">
-        <button
+      <div className="absolute top-4 right-4 flex gap-2 property">
+        <LiquidGlassButton
           onClick={onSaveToggle}
-          className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm font-medium hover:bg-white/15 transition-colors flex items-center gap-2"
+          className="px-4 py-2 w-18  rounded-lg"
         >
-          <HeartIcon filled={isSaved} />
-          Save
-        </button>
-        <button className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm font-medium hover:bg-white/15 transition-colors flex items-center gap-2">
-          <ShareIcon />
-          Share
-        </button>
+          <div className="flex items-center gap-1.5">
+            <HeartIcon size={14} filled={isSaved} />
+            <span className="text-sm">Save</span>
+          </div>
+        </LiquidGlassButton>
+        <LiquidGlassButton
+          onClick={onSaveToggle}
+          className="px-4 py-2 w-18 mr-4  rounded-lg"
+        >
+          <div className="flex items-center gap-1.5">
+            <ShareIcon size={14} />
+            <span className="text-sm">Share</span>
+            
+          </div>
+        </LiquidGlassButton>
       </div>
       <div className="absolute bottom-20 left-4 flex gap-2">
         {badges.map((badge, index) => (
-          <Badge key={index} label={badge} />
+          <Badge variant="primary" key={index} label={badge} />
         ))}
       </div>
       <div className="absolute bottom-4 left-4 right-4">
@@ -37,4 +52,3 @@ const PropertyImageHeader = ({ image, badges, title, location, isSaved, onSaveTo
 };
 
 export default PropertyImageHeader;
-

@@ -1150,3 +1150,9 @@
   position: relative;
   z-index: 1;
 }
+
+.blur-performance{
+  -webkit-filter: blur(60px);
+  backdrop-filter: blur(60px);
+
+}
