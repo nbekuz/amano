@@ -31,7 +31,7 @@ const PropertyImageHeader = ({
           <div className="flex items-center gap-1.5">
             <ShareIcon size={14} />
             <span className="text-sm">Share</span>
-            
+
           </div>
         </LiquidGlassButton>
       </div>

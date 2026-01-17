@@ -37,7 +37,8 @@ const WalletPerformanceGraph = ({ data }) => {
             options={["Last 6 month", "Last year", "All time"]}
             value={timeframe}
             onChange={setTimeframe}
-            // className="w-40"
+            isLight={true}
+            className="w-35"
           />
         </div>
       </div>

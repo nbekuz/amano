@@ -47,11 +47,12 @@ const PerformanceAnalytics = ({ data }) => {
         </div>
         <CustomDropdown
           options={[
-            "Last year",
+            "Last year ",
             "Last 6 months",
             "Last 3 months",
             "Last month",
           ]}
+          isLight={true}
           value={timeRange}
           onChange={setTimeRange}
           className="ml-auto"

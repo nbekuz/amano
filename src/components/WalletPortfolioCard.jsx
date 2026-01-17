@@ -17,7 +17,7 @@ const WalletPortfolioCard = ({ totalValue, change }) => {
           <div className="text-white/70 font-medium text-sm mb-3">
             Total Portfolio Value
           </div>
-          <div className="text-white font-bold text-2xl  ">{totalValue}</div>
+          <div className="text-white font-bold text-2xl mb-3 ">{totalValue}</div>
         </div>
         <div className="text-white -rotate-135 text-lg w-5 h-5 rounded-full ">
           <DepositIcon />

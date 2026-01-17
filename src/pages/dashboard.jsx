@@ -100,11 +100,14 @@ const Dashboard = () => {
                   options={['Dividend', 'Interest', 'Capital Gains', 'Other']}
                   value={incomeType}
                   onChange={setIncomeType}
+                  isLight={true}
+                  className="w-30"
                 />
                 <CustomDropdown
                   options={['Monthly', 'Quarterly', 'Yearly', 'All Time']}
                   value={incomePeriod}
                   onChange={setIncomePeriod}
+                  isLight={true}
                 />
               </div>
             </div>

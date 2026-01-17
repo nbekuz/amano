@@ -6,6 +6,7 @@ const CustomDropdown = ({
   onChange,
   placeholder,
   className = "",
+  isLight = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState(
@@ -53,7 +54,7 @@ const CustomDropdown = ({
   );
 
   return (
-    <div className={`relative isolate z-10  ${className}`} ref={dropdownRef}>
+    <div className={`relative isolate z-10  ${className} ${isLight ? "light-dropdown" : ""}`} ref={dropdownRef}>
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}

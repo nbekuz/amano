@@ -15,7 +15,7 @@ const WalletPopup = ({ isOpen, onClose }) => {
         <div className="wallet-popup-effect" />
         <div className="wallet-popup-tint" />
         <div className="wallet-popup-shine" />
-        <div className="wallet-popup-content">
+        <div className="wallet-popup-content ">
           <WalletPortfolioCard totalValue="$58,233.99" change="+15.3%" />
         </div>
       </div>

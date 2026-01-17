@@ -107,7 +107,7 @@ const Portfolio = () => {
         <div className="flex flex-col col-span-2  gap-6 items-start flex-1">
           <div className="flex w-full  gap-6">
             <PortfolioCard
-              title="Total Portfolio Value"
+              title="Total Portfolio Value "
               value="$15,774.00"
               subtitle="+1.80% Today"
               icon="coin"

@@ -38,6 +38,7 @@ const PerformanceGraph = ({ data }) => {
           value={timeRange}
           onChange={setTimeRange}
           className="ml-auto"
+          isLight={true}
         />
       </div>
       <div className="h-104">
