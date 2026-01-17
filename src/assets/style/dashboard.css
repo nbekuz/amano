@@ -11,17 +11,16 @@
   inset: 0;
   border-radius: 17px;
   padding: 1px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   pointer-events: none;
   z-index: -1;
 }
+
 .stats-card-icon {
   width: 47px;
   height: 47px;
@@ -43,11 +42,9 @@
   left: 0;
   right: 0;
   height: 50%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      transparent 100%);
   border-radius: 80px 80px 0 0;
   pointer-events: none;
 }
@@ -77,9 +74,11 @@
   background-color: rgba(251, 29, 33, 0.12);
   color: #fb1d21;
 }
+
 .compliance-card {
   background: linear-gradient(180deg, #010214 34.31%, #7e55ec 100%);
 }
+
 .stat-card-blur {
   filter: blur(70px);
   background: #482f89;
@@ -93,11 +92,13 @@
   background: #482f89;
   transform: rotate(-45deg);
 }
+
 .stat-card-blur2 {
   filter: blur(50px);
   background: #482f89;
   transform: rotate(45deg);
 }
+
 .stat-card-blur3 {
   filter: blur(55px);
   background: #482f89;
@@ -130,17 +131,15 @@
   left: 0;
   right: 0;
   height: 50%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      transparent 100%);
   border-radius: 8px 8px 0 0;
   pointer-events: none;
   z-index: 0;
 }
 
-.portfolio-holding-button > * {
+.portfolio-holding-button>* {
   position: relative;
   z-index: 1;
 }
@@ -168,6 +167,7 @@
   border-radius: 12px;
   overflow: hidden;
 }
+
 .portfolio-table-head {
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -252,7 +252,7 @@
   height: 12px;
 }
 
-.allocation-bar > * + * {
+.allocation-bar>*+* {
   margin-left: 1px;
 }
 
@@ -310,11 +310,9 @@
 }
 
 .income-summary-card {
-  background: linear-gradient(
-    180deg,
-    rgba(131, 101, 255, 0.15) 0%,
-    rgba(16, 16, 26, 0.02) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(131, 101, 255, 0.15) 0%,
+      rgba(16, 16, 26, 0.02) 100%);
 }
 
 .income-dropdown {
@@ -347,10 +345,12 @@
   filter: blur(70px);
   background: #7e55ec;
 }
+
 .graph-blur {
   filter: blur(90px);
   background: #7e55ec;
 }
+
 .recent-activity-item {
   display: flex;
   align-items: flex-start;
@@ -390,11 +390,9 @@
   left: 0;
   right: 0;
   height: 50%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      transparent 100%);
   border-radius: 8px 8px 0 0;
   pointer-events: none;
 }
@@ -594,11 +592,9 @@
   inset: 0;
   border-radius: 17px;
   padding: 1px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.13) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
@@ -627,11 +623,9 @@
   inset: 0;
   border-radius: 17px;
   padding: 1px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.13) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
@@ -1151,8 +1145,35 @@
   z-index: 1;
 }
 
-.blur-performance{
+.blur-performance {
   -webkit-filter: blur(60px);
-  backdrop-filter: blur(60px);
+  filter: blur(60px);
+  will-change: filter;
+  transform: translateZ(0);
+
+}
+
+.next-blur {
+  -webkit-filter: blur(200px);
+  filter: blur(200px);
+  height: calc(100% - 8px);
+  will-change: filter;
+  transform: translateZ(0);
+}
+
+.propert-blur {
+  -webkit-filter: blur(200px);
+  filter: blur(200px);
+  height: 90%;
+  will-change: filter;
+  transform: translateZ(0);
+}
+
+.propert-blur2 {
+  -webkit-filter: blur(120px);
+  filter: blur(120px);
+  will-change: filter;
+  transform: translateZ(0);
+  height: 80%;
 
 }

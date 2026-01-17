@@ -33,21 +33,11 @@ const PropertyPerformanceChart = ({ data }) => {
               <span className="text-gray-400 text-sm">Yield Income</span>
             </div>
           </div>
-          <CustomDropdown
-            options={[
-              "Last 6 months",
-              "Last year",
-              "Last 3 months",
-              "Last month",
-            ]}
-            value={timeRange}
-            onChange={setTimeRange}
-          />
         </div>
       </div>
       <div className="h-80 mt-4">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data} margin={{ top: 10, right: 10, left: 10, bottom: 10 }}>
+          <LineChart data={data} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
             <defs>
               <linearGradient id="totalValueGradient" x1="0" y1="0" x2="0" y2="1">
                 <stop
@@ -80,10 +70,6 @@ const PropertyPerformanceChart = ({ data }) => {
               tickLine={false}
             />
             <Tooltip content={<GlassTooltip active={true} />} />
-            <Legend 
-              wrapperStyle={{ paddingTop: "30px", paddingBottom: "10px" }}
-              iconType="circle"
-            />
             <Line
               type="monotone"
               dataKey="totalValue"
@@ -111,7 +97,7 @@ const PropertyPerformanceChart = ({ data }) => {
                 strokeWidth: 2,
                 stroke: "#fff",
               }}
-              name=""
+              name="Yield Income"
             />
           </LineChart>
         </ResponsiveContainer>

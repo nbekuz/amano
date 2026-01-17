@@ -23,6 +23,7 @@
   --color-green-light-hover: #18d04b2a;
   --color-bg-base: #0f0f0f;
   --color-bg-hover: #252525;
+  --color-white-10: #FDFCFF;
 }
 
 body {
@@ -91,4 +92,18 @@ body {
 
 .property .lg-btn {
   width: 72px !important;
+}
+
+.revenue-breakdown-blur {
+  -webkit-filter: blur(75px);
+  filter: blur(75px);
+}
+.gover-tap-blur{
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+}
+
+.min-card-blur{
+  -webkit-filter: blur(70px);
+  filter: blur(70px);
 }

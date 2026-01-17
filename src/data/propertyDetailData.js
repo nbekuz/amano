@@ -65,7 +65,7 @@ export const financialsData = {
   ],
   operatingExpenses: [
     { category: "Maintenance", monthly: "$4,500", annual: "$54,000" },
-    { category: "Management...", monthly: "$2,000", annual: "$24,000" },
+    { category: "Management ", monthly: "$2,000", annual: "$24,000" },
     { category: "Insurance", monthly: "$1,500", annual: "$18,000" },
     { category: "Utilities", monthly: "$1,000", annual: "$12,000" },
   ],
